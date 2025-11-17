@@ -47,15 +47,23 @@ Un cop l'estat canviï a "Running", el servidor estarà llest per acceptar clien
 Un cop el servidor PXE estigui actiu (després de fer clic a "Play"), torna al teu terminal i executa la següent comanda per iniciar la màquina client:
 
 vagrant up pxeclient
+
 Hauries de veure com la consola de la VM client s'obre i comença a arrencar per xarxa, rebent una adreça IP del servidor iVentoy i mostrant el menú d'arrencada amb les ISOs que has preparat.
-Gestió de l'Entorn
+
+### Gestió de l'Entorn
 Pots utilitzar les següents comandes de Vagrant per gestionar les màquines virtuals:
+
 vagrant status: Mostra l'estat actual de les VMs (iventoy i pxeclient).
+
 vagrant halt: Atura les màquines virtuals de forma segura.
+
 vagrant destroy -f: Elimina completament les màquines virtuals i tots els seus recursos.
-Estructura del Directori iventoy
+
+### Estructura del Directori iventoy
+
 L'estructura del directori iventoy ha de ser la següent per al correcte funcionament del projecte:
-´´´bash
+```bash
+
 iventoy/
 ├── data/       # Dades de configuració d'iVentoy
 ├── doc/        # Documentació i llicències
