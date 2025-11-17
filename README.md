@@ -14,6 +14,7 @@ Aquest projecte configura un entorn de proves complet per a [iVentoy](https://ww
 Abans de començar, assegura't de tenir instal·lat el següent programari:
 *   [Vagrant](https://developer.hashicorp.com/vagrant/downloads)
 *   [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+*   El fitxer `iventoy-1.0.21-linux-free.tar.gz`. Aquest projecte està preparat per a aquesta versió específica. La podeu descarregar des de la **[pàgina oficial de publicacions d'iVentoy a GitHub](https://github.com/ventoy/PXE/releases/download/v1.0.21/iventoy-1.0.21-linux-free.tar.gz)**. Un cop descarregat, descomprimiu-lo de manera que la carpeta `iventoy` quedi a l'arrel del projecte.
 
 ## Com Utilitzar
 
@@ -25,8 +26,7 @@ Col·loca totes les imatges ISO dels sistemes operatius que vulguis arrencar per
 iventoy/
 └── iso/
 └── el-teu-sistema-operatiu.iso
-code
-Code
+
 ### Pas 2: Iniciar el Servidor iVentoy
 
 Obre un terminal a l'arrel del projecte (on es troba el `Vagrantfile`) i executa la següent comanda per aixecar **només** la màquina virtual del servidor:
@@ -38,10 +38,13 @@ Aquesta comanda crearà la VM iventoy-server, la configurarà, sincronitzarà la
 ### Pas 3: Activar el Servei PXE a la Interfície Web
 
 Aquest pas és crucial. El servei web d'iVentoy està actiu, però el servidor PXE (que permet l'arrencada per xarxa) s'ha d'iniciar manualment.
+
 Obre el teu navegador web a l'ordinador amfitrió.
+
 Ves a l'adreça: http://localhost:26000.
+
 A la interfície d'iVentoy, busca l'adreça IP del servidor (192.168.56.10) i fes clic al botó d'inici (icona de "Play") per activar el servei PXE.
-![alt text](https://www.iventoy.com/en/assets/images/screenshot/select_ip.png)
+![alt text](https://www.iventoy.com/static/img/screen/main_en.png)
 Un cop l'estat canviï a "Running", el servidor estarà llest per acceptar clients.
 ### Pas 4: Iniciar el Client PXE
 Un cop el servidor PXE estigui actiu (després de fer clic a "Play"), torna al teu terminal i executa la següent comanda per iniciar la màquina client:
