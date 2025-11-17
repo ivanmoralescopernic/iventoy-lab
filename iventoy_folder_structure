@@ -1,0 +1,41 @@
+iventoy/
+├── data
+│   ├── config.dat
+│   ├── iventoy.dat
+│   └── mac.db
+├── doc
+│   ├── EULA_CN.txt
+│   ├── EULA_EN.txt
+│   ├── LICENSE_CN.txt
+│   └── LICENSE_EN.txt
+├── iso
+│   ├── MiniOS11 Pro v2025.01 x64.iso
+│   ├── NoblePup32-24.04-251101.iso
+│   └── slitaz-4.0.iso
+├── iventoy.sh
+├── lib
+│   ├── iventoy
+│   └── lin64
+│       ├── libevent-2.1.so.7
+│       ├── libevent_pthreads-2.1.so.7
+│       ├── libglib-2.0.so.0
+│       ├── libgthread-2.0.so.0
+│       ├── libhivex.so.0
+│       ├── libiconv.so.2
+│       └── libwim.so.15
+├── log
+│   ├── history
+│   └── log.txt
+└── user
+    └── scripts
+        └── example
+            ├── autoYast.xml
+            ├── cloud-init-user-data
+            ├── deepin.ini
+            ├── kickstart6.cfg
+            ├── kickstart7.cfg
+            ├── kickstart8.cfg
+            ├── openeuler.cfg
+            ├── preseed.cfg
+            └── unattended.xml
+
