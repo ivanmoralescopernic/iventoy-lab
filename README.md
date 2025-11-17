@@ -31,20 +31,21 @@ Code
 
 Obre un terminal a l'arrel del projecte (on es troba el `Vagrantfile`) i executa la següent comanda per aixecar **només** la màquina virtual del servidor:
 
-```bash
 vagrant up iventoy
+
 Aquesta comanda crearà la VM iventoy-server, la configurarà, sincronitzarà la carpeta iventoy/ i iniciarà el servei web d'iVentoy.
-Pas 3: Activar el Servei PXE a la Interfície Web
+
+### Pas 3: Activar el Servei PXE a la Interfície Web
+
 Aquest pas és crucial. El servei web d'iVentoy està actiu, però el servidor PXE (que permet l'arrencada per xarxa) s'ha d'iniciar manualment.
 Obre el teu navegador web a l'ordinador amfitrió.
 Ves a l'adreça: http://localhost:26000.
 A la interfície d'iVentoy, busca l'adreça IP del servidor (192.168.56.10) i fes clic al botó d'inici (icona de "Play") per activar el servei PXE.
 ![alt text](https://www.iventoy.com/en/assets/images/screenshot/select_ip.png)
 Un cop l'estat canviï a "Running", el servidor estarà llest per acceptar clients.
-Pas 4: Iniciar el Client PXE
+### Pas 4: Iniciar el Client PXE
 Un cop el servidor PXE estigui actiu (després de fer clic a "Play"), torna al teu terminal i executa la següent comanda per iniciar la màquina client:
-code
-Bash
+
 vagrant up pxeclient
 Hauries de veure com la consola de la VM client s'obre i comença a arrencar per xarxa, rebent una adreça IP del servidor iVentoy i mostrant el menú d'arrencada amb les ISOs que has preparat.
 Gestió de l'Entorn
@@ -54,8 +55,7 @@ vagrant halt: Atura les màquines virtuals de forma segura.
 vagrant destroy -f: Elimina completament les màquines virtuals i tots els seus recursos.
 Estructura del Directori iventoy
 L'estructura del directori iventoy ha de ser la següent per al correcte funcionament del projecte:
-code
-Code
+´´´bash
 iventoy/
 ├── data/       # Dades de configuració d'iVentoy
 ├── doc/        # Documentació i llicències
